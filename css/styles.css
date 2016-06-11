@@ -1,0 +1,58 @@
+body {
+  background-color: rgb(50,150,200);
+  font-family: "Arial";
+}
+
+h2 {
+  color:rgb(256,256,256);
+}
+
+.newentry{
+  width:100%;
+  text-align:left;
+  border-bottom: 5px solid rgb(0,0,0);
+  padding:10px 5px 10px 5px;
+}
+
+.articletitle{
+  color:rgb(50,50,50);
+  display:inline;
+  font-weight:bold;
+}
+
+.articletext{
+  color:black;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+#temperature{
+  display:inline;
+}
+
+.quotebox{
+  width:40%;
+  position: relative;
+  text-align:center;
+  left: 30%;
+  height: 30%;
+  border: 3px;
+/*   border-style: solid; */
+  border-color: black;
+  border-radius:35px;
+}
+
+.randomClick{
+  a{
+    text-decoration: overline;
+  }
+  text-decoration: line-through;
+}
