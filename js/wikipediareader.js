@@ -18,7 +18,8 @@ var openWeatherMapKey = '3da93211bae1ede6af6a70a1ab2e1fee';
   
   var requestString = "https://api.openweathermap.org/data/2.5/weather?lat=43.4&lon=74.5"+ "&APPID="+openWeatherMapKey;
   
-  requestString="http://cors.io/?u=http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein";
+  // requestString="http://cors.io/?u=http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein";
+  requestString ="Access-Control-Allow-Origin: http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert";
   console.log("are you there god");
   // $httpn(function(response){ console.log(response); })
   request = new XMLHttpRequest();
@@ -29,7 +30,7 @@ var openWeatherMapKey = '3da93211bae1ede6af6a70a1ab2e1fee';
         //parse the JSON
         console.log(request);
         console.log(request.responseText);
-        parsedWiki=JSON.parse(request.responseText);
+        // parsedWiki=JSON.parse(request.responseText);
         $("#printjson").html(request.responseText);
       }
 
