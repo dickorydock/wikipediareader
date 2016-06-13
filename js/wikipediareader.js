@@ -16,8 +16,8 @@ var searchFunction = function(){
   $.ajax({
         type: "GET",
         url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=Jimi&callback=JSON_CALLBACK",
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
+        // contentType: "application/json; charset=utf-8",
+        // dataType: "json",
         success: function (data, textStatus, jqXHR) {
             console.log(data);
             console.log("if you might");
