@@ -12,19 +12,17 @@ var searchFunction = function(){
   // wikijson = "end of it";
   // $("#testBox").html(htmlstring);
   // $("searchtext").value="";
-
-  $.ajax({
+ 
+ $.ajax({
         type: "GET",
-        url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=Jimi&callback=JSON_CALLBACK",
-        // contentType: "application/json; charset=utf-8",
-        // dataType: "json",
+        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Jimi_Hendrix&callback=?",
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        dataType: "json",
         success: function (data, textStatus, jqXHR) {
             console.log(data);
-            console.log("if you might");
-
-            $("#testBox").html(data);          },
-        error: function (errorMessage) {console.log("does this work");
-        console.log(errorMessage);
+        },
+        error: function (errorMessage) {
         }
     });
 
