@@ -18,7 +18,7 @@ var searchFunction = function(){
         type: "GET",
         url: "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=Hendrix",
         // contentType: "application/json; charset=utf-8",
-        // async: false,
+        async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
             console.log(data);
