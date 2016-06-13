@@ -28,7 +28,7 @@ var searchFunction = function(){
     });
 
 
-    });
+    };
 
 
   // requestString="http://cors.io/?u=http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein";
