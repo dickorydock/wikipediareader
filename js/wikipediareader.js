@@ -38,6 +38,24 @@ var openWeatherMapKey = '3da93211bae1ede6af6a70a1ab2e1fee';
     }
     request.open("get", requestString, true);
     request.send();
+
+$.ajax( {
+    url: 'https://en.wikipedia.org/w/api.php',
+    data: {
+        action: 'query',
+        meta: 'userinfo',
+        format: 'json',
+        origin: 'https://www.mediawiki.org'
+    },
+    xhrFields: {
+        withCredentials: true
+    },
+    dataType: 'json'
+} ).done( function ( data ) {
+  console.log("whts up");
+  console.log(data);
+} );
+
 }
 
 //searchFunction();
