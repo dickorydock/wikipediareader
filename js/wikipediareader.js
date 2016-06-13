@@ -25,6 +25,7 @@ var openWeatherMapKey = '3da93211bae1ede6af6a70a1ab2e1fee';
   request = new XMLHttpRequest();
     request.onreadystatechange=function(){
       console.log("its me");
+      request.setRequestHeader("Origin", "http://dickorydock.github.io");
       console.log("first" +request.readyState + " second "+request.status);
       if (request.readyState==4&&request.status==200){
         //parse the JSON
