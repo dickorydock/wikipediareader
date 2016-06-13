@@ -23,6 +23,7 @@ var searchFunction = function(){
             console.log(data);
         },
         error: function (errorMessage) {
+          console.log(errorMessage);
         }
     });
 
