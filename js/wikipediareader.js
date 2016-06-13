@@ -23,7 +23,7 @@ var searchFunction = function(){
             console.log("if you might");
 
             $("#testBox").html(data);          },
-        error: function (errorMessage) {console.log("bad is " +errorMessage);
+        error: function (errorMessage) {console.log(errorMessage);
         }
     });
 
