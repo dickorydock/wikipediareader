@@ -21,9 +21,10 @@ var searchFunction = function(){
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
             console.log(data);
+            console.log("if you might");
 
             $("#testBox").html(data);          },
-        error: function (errorMessage) {
+        error: function (errorMessage) {console.log("bad is " +errorMessage);
         }
     });
 
