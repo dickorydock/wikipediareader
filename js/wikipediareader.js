@@ -16,7 +16,7 @@ var searchFunction = function(){
  
     $.ajax({
         type: "GET",
-        url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Jimi_Hendrix&callback=?",
+        url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Jimi",
         contentType: "application/json; charset=utf-8",
         async: false,
         dataType: "json",
