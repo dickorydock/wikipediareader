@@ -17,7 +17,6 @@ var searchFunction = function(){
         type: "GET",
         url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=Jimi&callback=JSON_CALLBACK",
         contentType: "application/json; charset=utf-8",
-        async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
             console.log(data);
