@@ -3,14 +3,13 @@
 var searchFunction = function(){
  
  console.log("Test Message 1.");
-    var jsonresult = "abc";
     $.ajax({
       dataType: "jsonp",
       url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein&callback=?", 
       success: function(result){
       console.log('it worked!');
       console.log(result);
-      jsonresult = result;
+      var jsonresult = result;
       },
       error: function(error){
         console.log("oh no");
