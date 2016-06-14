@@ -8,12 +8,23 @@
 <body>
 <!-- Main page placeholders -->
 
-    <div id="testBox">this is text I want to change when you press submit</div>
+    <div id="testBox">Change This</div>
 
 
 <!-- Javascript Inclusion -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-<script type="text/javascript" src="js/wikipediareader2.js"></script>
+<!-- <script type="text/javascript" src="js/wikipediareader2.js"></script> -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    console.log("Test Message 1.");
+    $.ajax({url: "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein&callback=JSON_CALLBACK", success: function(result){
+      console.log('it worked!');
+      console.log(result);
+      }, error: function(result){console.log("oh no, it failed.");} 
+    });
+    console.log("Test Message 2");
+  });
+</script>
 
 </body> 
