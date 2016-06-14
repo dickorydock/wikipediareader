@@ -83,9 +83,9 @@ var searchFunction = function(){
 //searchFunction();
 
 $("#submitForm").submit(function(){
-  // console.log("you clicked");
+  console.log("you clicked");
   searchFunction();
-  // event.preventDefault();
+  event.preventDefault();
 });
 
 
