@@ -82,7 +82,7 @@ var searchFunction = function(){
 
 //searchFunction();
 
-$("#submitForm").submit(function(){
+$("#submitForm").on("submit",function(){
   console.log("you clicked");
   searchFunction();
   event.preventDefault();
