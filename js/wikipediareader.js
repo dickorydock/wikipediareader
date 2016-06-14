@@ -3,14 +3,12 @@
 var searchFunction = function(){
  
  console.log("Test Message 1.");
-    var jsonresult;
     $.ajax({
       dataType: "jsonp",
       url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein&callback=?", 
       success: function(result){
       console.log('it worked!');
       console.log(result);
-      jsonresult = result;
       },
       error: function(error){
         console.log("oh no");
@@ -26,7 +24,6 @@ var searchFunction = function(){
     }
     wikijson = "end of it";
     $("#testBox").html(htmlstring);
-    $("#printjson").html(jsonresult);
     $("searchtext").value="";
     console.log("after");
 
