@@ -11,12 +11,17 @@ var searchFunction = function(){
       console.log('it worked!');
       console.log(result);
       jsonresult = result;
+      printAjax(result);
       },
       error: function(error){
         console.log("oh no");
       }
     });
 
+
+   }
+
+var printAjax = function(ajaxresult){
 
     exstring = $("#searchtext").val();
     arrstring = exstring.split(" ");
@@ -35,7 +40,7 @@ var searchFunction = function(){
     $("#searchtext").value="";
     console.log("after");  
 
-   }
+}
  // $.ajax({
  //        type: "GET",
  //        url: "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein",
