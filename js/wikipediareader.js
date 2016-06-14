@@ -2,7 +2,7 @@
 
 var searchFunction = function(){
  
- console.log("Test Message 1b.");
+ console.log("Test Message 1c.");
  var jsonresult=null;
     $.ajax({
       dataType: "jsonp",
@@ -33,7 +33,7 @@ var printAjax = function(ajaxresult){
     }
     wikijson = "end of it";
     console.log("print json before");
-    console.log(ajaxresult);
+    console.log(ajaxresult.query.search[0].size);
     console.log("print json after");
     $("#printjson").html(JSON.parse(ajaxresult));
     $("#testBox").html(htmlstring);
