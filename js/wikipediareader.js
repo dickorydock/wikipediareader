@@ -15,10 +15,10 @@ var searchFunction = function(){
  
  $.ajax({
         type: "GET",
-        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Jimi_Hendrix&callback=?",
-        contentType: "application/json; charset=utf-8",
-        async: false,
-        dataType: "json",
+        url: "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein",
+        contentType: "text/plain",
+        async: true,
+        // dataType: "json",
         success: function (data, textStatus, jqXHR) {
             console.log(data);
         },
