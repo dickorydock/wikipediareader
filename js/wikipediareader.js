@@ -32,7 +32,7 @@ var searchFunction = function(){
     console.log("print json after");
     $("#printjson").html(jsonresult);
     $("#testBox").html(htmlstring);
-    $("searchtext").value="";
+    $("#searchtext").value="";
     console.log("after");  
 
    }
