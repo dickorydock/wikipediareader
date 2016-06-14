@@ -9,8 +9,11 @@ var searchFunction = function(){
       success: function(result){
       console.log('it worked!');
       console.log(result);
+      },
+      error: function(error){
+        console.log("oh no");
       }});
-
+}
   // exstring = $("#searchtext").val();
   // arrstring = exstring.split(" ");
   // htmlstring="";
@@ -75,7 +78,7 @@ var searchFunction = function(){
 //   console.log(data);
 // } );
 
-}
+
 
 //searchFunction();
 
