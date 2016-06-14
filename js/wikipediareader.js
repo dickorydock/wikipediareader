@@ -26,8 +26,8 @@ var printAjax = function(ajaxresult){
     exstring = $("#searchtext").val();
     arrstring = exstring.split(" ");
     htmlstring="";
-    if (exstring.length>0){
-    for (i=0; i<arrstring.length; i++){
+    if (ajaxresult.query.search.length>0){
+    for (i=0; i<ajaxresult.query.search.length; i++){
     htmlstring+="<div class='newentry'><br><div class='articletitle'>"+ajaxresult.query.search[i].title+"</div><div class='articletext'>"+ajaxresult.query.search[i].snippet+"</div></div>";    
     }
     }
