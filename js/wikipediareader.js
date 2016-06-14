@@ -9,6 +9,8 @@ var searchFunction = function(){
       success: function(result){
       console.log('it worked!');
       console.log(result);
+      
+    $("#printjson").html(result);
       },
       error: function(error){
         console.log("oh no");
