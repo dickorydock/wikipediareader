@@ -27,6 +27,9 @@ var searchFunction = function(){
     }
     }
     wikijson = "end of it";
+    console.log("print json before");
+    console.log(jsonresult);
+    console.log("print json after");
     $("#printjson").html(jsonresult);
     $("#testBox").html(htmlstring);
     $("searchtext").value="";
