@@ -28,7 +28,7 @@ var printAjax = function(ajaxresult){
     htmlstring="";
     if (exstring.length>0){
     for (i=0; i<arrstring.length; i++){
-    htmlstring+="<div class='newentry'><br><div class='articletitle'>"+"Random Title"+"</div><div class='articletext'>"+arrstring[i]+"</div></div>";    
+    htmlstring+="<div class='newentry'><br><div class='articletitle'>"+ajaxresult.query.search[i].title+"</div><div class='articletext'>"+ajaxresult.query.search[i].snippet+"</div></div>";    
     }
     }
     wikijson = "end of it";
