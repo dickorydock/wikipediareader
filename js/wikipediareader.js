@@ -1,6 +1,16 @@
 
 
 var searchFunction = function(){
+ 
+ console.log("Test Message 1.");
+    $.ajax({
+      dataType: "jsonp",
+      url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein&callback=?", 
+      success: function(result){
+      console.log('it worked!');
+      console.log(result);
+      }});
+
   // exstring = $("#searchtext").val();
   // arrstring = exstring.split(" ");
   // htmlstring="";
@@ -13,19 +23,19 @@ var searchFunction = function(){
   // $("#testBox").html(htmlstring);
   // $("searchtext").value="";
  
- $.ajax({
-        type: "GET",
-        url: "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein",
-        contentType: "text/plain",
-        async: true,
-        // dataType: "json",
-        success: function (data, textStatus, jqXHR) {
-            console.log(data);
-        },
-        error: function (errorMessage) {
-          console.log(errorMessage);
-        }
-    });
+ // $.ajax({
+ //        type: "GET",
+ //        url: "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein",
+ //        contentType: "text/plain",
+ //        async: true,
+ //        // dataType: "json",
+ //        success: function (data, textStatus, jqXHR) {
+ //            console.log(data);
+ //        },
+ //        error: function (errorMessage) {
+ //          console.log(errorMessage);
+ //        }
+ //    });
 
 
   // requestString="http://cors.io/?u=http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein";
