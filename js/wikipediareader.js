@@ -2,7 +2,7 @@
 
 var searchFunction = function(){
  
- console.log("Test Message 1a.");
+ console.log("Test Message 1b.");
  var jsonresult=null;
     $.ajax({
       dataType: "jsonp",
