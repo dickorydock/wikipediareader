@@ -19,8 +19,8 @@
   $(document).ready(function(){
     console.log("Test Message 1.");
     $.ajax({
-      url: "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein&callback=JSON_CALLBACK", 
-      dataType: "json",
+      url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein&callback=JSON_CALLBACK", 
+      dataType: "script",
       success: function(result){
       console.log('it worked!');
       console.log(result);
