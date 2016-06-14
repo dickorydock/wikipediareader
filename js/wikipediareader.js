@@ -25,6 +25,7 @@ var searchFunction = function(){
    wikijson = "end of it";
    $("#testBox").html(htmlstring);
   $("searchtext").value="";
+  console.log("after");
  }
  // $.ajax({
  //        type: "GET",
