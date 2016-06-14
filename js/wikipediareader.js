@@ -35,7 +35,7 @@ var printAjax = function(ajaxresult){
     console.log("print json before");
     console.log(ajaxresult.query.search[0].size);
     console.log("print json after");
-    $("#printjson").html(JSON.parse(ajaxresult));
+    // $("#printjson").html(JSON.parse(ajaxresult));
     $("#testBox").html(htmlstring);
     $("#searchtext").value="";
     console.log("after");  
