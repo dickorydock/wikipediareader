@@ -8,7 +8,7 @@
 <body>
 <!-- Main page placeholders -->
 
-    <div id="testBox">Change This</div>
+    <div id="testBox">Change This 4</div>
 
 
 <!-- Javascript Inclusion -->
@@ -18,9 +18,8 @@
 <script type="text/javascript">
   $(document).ready(function(){
     console.log("Test Message 1.");
-    $.getJSON({
-      url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein&callback=JSON_CALLBACK", 
-      success: function(result){
+    $.getJSON("http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein&callback=JSON_CALLBACK", 
+      function(json){
       console.log('it worked!');
       console.log(result);
       }, error: function(result){console.log("oh no, it failed.");} 
