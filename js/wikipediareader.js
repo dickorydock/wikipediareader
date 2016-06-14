@@ -33,7 +33,7 @@ var printAjax = function(ajaxresult){
     }
     wikijson = "end of it";
     console.log("print json before");
-    console.log(jsonresult);
+    console.log(ajaxresult);
     console.log("print json after");
     $("#printjson").html(ajaxresult);
     $("#testBox").html(htmlstring);
