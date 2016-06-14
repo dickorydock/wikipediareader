@@ -35,7 +35,7 @@ var printAjax = function(ajaxresult){
     console.log("print json before");
     console.log(ajaxresult);
     console.log("print json after");
-    $("#printjson").html(ajaxresult);
+    $("#printjson").html(JSON.parse(ajaxresult));
     $("#testBox").html(htmlstring);
     $("#searchtext").value="";
     console.log("after");  
