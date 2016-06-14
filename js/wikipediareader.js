@@ -12,21 +12,25 @@ var searchFunction = function(){
       },
       error: function(error){
         console.log("oh no");
-      }});
+      }
 
-   exstring = $("#searchtext").val();
-   arrstring = exstring.split(" ");
-   htmlstring="";
-   if (exstring.length>0){
-   for (i=0; i<arrstring.length; i++){
-     htmlstring+="<div class='newentry'><br><div class='articletitle'>"+"Random Title"+"</div><div class='articletext'>"+arrstring[i]+"</div></div>";    
+    exstring = $("#searchtext").val();
+    arrstring = exstring.split(" ");
+    htmlstring="";
+    if (exstring.length>0){
+    for (i=0; i<arrstring.length; i++){
+    htmlstring+="<div class='newentry'><br><div class='articletitle'>"+"Random Title"+"</div><div class='articletext'>"+arrstring[i]+"</div></div>";    
+    }
+    }
+    wikijson = "end of it";
+    $("#testBox").html(htmlstring);
+    $("searchtext").value="";
+    console.log("after");
+
+
+    });
+
    }
-   }
-   wikijson = "end of it";
-   $("#testBox").html(htmlstring);
-  $("searchtext").value="";
-  console.log("after");
- }
  // $.ajax({
  //        type: "GET",
  //        url: "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein",
