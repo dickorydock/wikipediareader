@@ -28,7 +28,6 @@ var printAjax = function(ajaxresult){
     exstring = $("#searchtext").val();
     arrstring = exstring.split(" ");
     htmlstring="";
-    console.log("the query seah is");
     console.log(ajaxresult.query.search.length);
     console.log(ajaxresult.query.search);
     if (ajaxresult.query.search.length>0){
@@ -36,13 +35,9 @@ var printAjax = function(ajaxresult){
     htmlstring+="<div class='newentry'><br><div class='articletitle'>"+"<a href='https://en.wikipedia.org/?curid="+ajaxresult.query.recentchanges[i].pageid+"'>"+ajaxresult.query.search[i].title+"</a>"+"</div><div class='articletext'>"+ajaxresult.query.search[i].snippet+"</div></div>";    
     }
     }
-    wikijson = "end of it";
-    console.log("print json before");
     console.log(ajaxresult.query.search[0].size);
-    console.log("print json after");
     // $("#printjson").html(JSON.parse(ajaxresult));
     $("#testBox").html(htmlstring);
-    $("#searchtext").value="";
     console.log("after");  
 
 }
@@ -103,7 +98,6 @@ var printAjax = function(ajaxresult){
 //searchFunction();
 
 $("#submitForm").on("submit",function(){
-  console.log("you clicked.");
   searchFunction();
   event.preventDefault();
 });
