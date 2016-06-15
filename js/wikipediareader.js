@@ -3,10 +3,12 @@
 var searchFunction = function(){
  
  console.log("Test Message 1d.");
+ exstring = $("#searchtext").val();
+ console.log("you searched for "+exstring);
  var jsonresult=null;
     $.ajax({
       dataType: "jsonp",
-      url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein&callback=?", 
+      url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search|recentchanges&rcprop=ids&utf8=1&srsearch="+exstring+"&callback=?", 
       success: function(result){
       console.log('it worked!');
       console.log(result);
@@ -26,12 +28,12 @@ var printAjax = function(ajaxresult){
     exstring = $("#searchtext").val();
     arrstring = exstring.split(" ");
     htmlstring="";
-    console.log("the query search is");
+    console.log("the query seah is");
     console.log(ajaxresult.query.search.length);
     console.log(ajaxresult.query.search);
     if (ajaxresult.query.search.length>0){
     for (i=0; i<ajaxresult.query.search.length; i++){
-    htmlstring+="<div class='newentry'><br><div class='articletitle'>"+ajaxresult.query.search[i].title+"</div><div class='articletext'>"+ajaxresult.query.search[i].snippet+"</div></div>";    
+    htmlstring+="<div class='newentry'><br><div class='articletitle'>"+"<a href='https://en.wikipedia.org/?curid="+ajaxresult.query.recentchanges[i].pageid+"'>"+ajaxresult.query.search[i].title+"</a>"+"</div><div class='articletext'>"+ajaxresult.query.search[i].snippet+"</div></div>";    
     }
     }
     wikijson = "end of it";
@@ -101,7 +103,7 @@ var printAjax = function(ajaxresult){
 //searchFunction();
 
 $("#submitForm").on("submit",function(){
-  console.log("you clicked");
+  console.log("you clicked.");
   searchFunction();
   event.preventDefault();
 });
