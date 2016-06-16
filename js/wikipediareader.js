@@ -8,10 +8,11 @@ var searchFunction = function(){
  var jsonresult=null;
     $.ajax({
       dataType: "jsonp",
-      url: "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search|recentchanges&rcprop=ids&utf8=1&srsearch="+exstring+"&callback=?", 
+      url: "http://en.wikipedia.org/w/api.php?action=query&generator=search&utf8=1&format=json&gsrsearch="+exstring+"&prop=extracts&exintro=1&exlimit=20", 
       success: function(result){
       console.log('it worked!');
-      console.log(result);
+
+      console.log();
       jsonresult = result;
       printAjax(result);
       },
@@ -28,15 +29,20 @@ var printAjax = function(ajaxresult){
     exstring = $("#searchtext").val();
     arrstring = exstring.split(" ");
     htmlstring="";
-    console.log(ajaxresult.query.search.length);
-    console.log(ajaxresult.query.search);
-    if (ajaxresult.query.search.length>0){
-    for (i=0; i<ajaxresult.query.search.length; i++){
-    htmlstring+="<div class='newentry'><br><div class='articletitle'>"+"<a href='https://en.wikipedia.org/?curid="+ajaxresult.query.recentchanges[i].pageid+"'>"+ajaxresult.query.search[i].title+"</a>"+"</div><div class='articletext'>"+ajaxresult.query.search[i].snippet+"</div></div>";    
+    console.log(Object.keys(ajaxresult.query.pages).length);
+    console.log(ajaxresult.query.pages);
+    if (Object.keys(ajaxresult.query.pages).length>0){
+    for (i=0; i<Object.keys(ajaxresult.query.pages).length; i++){
+    htmlstring+="<div class='newentry'><br><div class='articletitle'>"
+                +"<a target='blank' href='https://en.wikipedia.org/?curid="
+                +ajaxresult.query.pages[Object.keys(ajaxresult.query.pages)[i]].pageid
+                +"'>"
+                +ajaxresult.query.pages[Object.keys(ajaxresult.query.pages)[i]].title
+                +"</a>"+"</div><div class='articletext'>"
+                +ajaxresult.query.pages[Object.keys(ajaxresult.query.pages)[i]].extract
+                +"</div></div>";    
     }
     }
-    console.log(ajaxresult.query.search[0].size);
-    // $("#printjson").html(JSON.parse(ajaxresult));
     $("#testBox").html(htmlstring);
     console.log("after");  
 
